@@ -13,6 +13,9 @@
 - **Beautiful Soup**: Used for web scraping to extract news headlines.
 - **Fake UserAgent**: Helps in bypassing restrictions by generating random user agents to prevent blocking by news websites.
 
+## Live Demo
+🔗 [The News Hub](https://the-news-hub-azure.vercel.app/)
+
 ## Installation & Setup
 
 ### Prerequisites
