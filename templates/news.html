@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site }} News</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,600,700' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="header-content">
+            <a href="/" class="back-link">Back to Homepage</a>
+            <h1>{{ site }} Headlines</h1>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                🌓
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="headlines">
+            {% for headline in headlines %}
+            <div class="headline">{{ headline }}</div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</body>
+</html>

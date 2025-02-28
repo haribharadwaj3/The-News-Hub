@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The News Hub</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,600,700' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <button class="theme-toggle" onclick="toggleTheme()">
+            🌓
+        </button>
+        <h1>Choose Your News Source</h1>
+        <div class="news">
+            <div class="news-site" onclick="window.location.href='/news/BBC'"">
+        <img class="logos" src="{{ url_for('static', filename='images/bbc.png') }}" alt="BBC News Logo">
+        <h2>BBC News</h2>
+        <p>Global & UK news.</p>
+    </div>
+    <div class="news-site" onclick="window.location.href='/news/CNN'">
+        <img src="{{ url_for('static', filename='images/cnn.png') }}" alt="CNN Logo">
+        <h2>CNN</h2>
+        <p>US & World news.</p>
+    </div>
+    <div class="news-site" onclick="window.location.href='/news/AP'">
+        <img src="{{ url_for('static', filename='images/ap.svg') }}" alt="AP Logo">
+        <h2>Associated Press</h2>
+        <p>Global breaking news.</p>
+    </div>
+    <div class="news-site" onclick="window.location.href='/news/TOI'">
+        <img src="{{ url_for('static', filename='images/toi.png') }}" alt="Times of India Logo">
+        <h2>Times of India</h2>
+        <p>India & World news.</p>
+    </div>
+    <div class="news-site" onclick="window.location.href='/news/NYT'">
+        <img src="{{ url_for('static', filename='images/nyt.png') }}" alt="New York Times Logo">
+        <h2>New York Times</h2>
+        <p>US & World news & culture.</p>
+    </div>
+    <div class="news-site" onclick="window.location.href='/news/HT'">
+        <img src="{{ url_for('static', filename='images/ht.jpg') }}" alt="Hindustan Times Logo">
+        <h2>Hindustan Times</h2>
+        <p>India news & top stories.</p>
+    </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</body>
+</html>
